@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  ros:
+    container_name: catkin
+    build: .
+    ports:
+    - 5900:5900
+    - 6080:80
