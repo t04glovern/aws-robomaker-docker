@@ -1,4 +1,4 @@
-# AWS RoboMaker Sample Application - CloudWatch Monitoring
+# AWS RoboMaker Dockerized [Sample Application - CloudWatch Monitoring]
 
 Monitor health and operational metrics for a fleet of robots in a simulated home using AWS CloudWatch Metrics and AWS CloudWatch Logs. Streamed metrics include speed, distance to nearest obstacle, distance to current goal, robot CPU utilization, and RAM usage.
 
