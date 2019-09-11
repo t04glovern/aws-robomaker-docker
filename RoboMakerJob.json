@@ -1,0 +1,25 @@
+{
+    "outputLocation": {
+        "s3Bucket": "devopstar",
+        "s3Prefix": "resources/aws-robomaker-kickstart/output/"
+    },
+    "maxJobDurationInSeconds": 3600,
+    "iamRole": "arn:aws:iam::123456789010:role/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "failureBehavior": "Continue",
+    "simulationApplications": [
+        {
+            "application": "arn:aws:robomaker:us-east-1:123456789010:simulation-application/aws-robomaker-kickstart/1568120923973",
+            "applicationVersion": "$LATEST",
+            "launchConfig": {
+                "packageName": "cloudwatch_simulation",
+                "launchFile": "bookstore_turtlebot_navigation.launch",
+                "environmentVariables": {
+                    "TURTLEBOT3_MODEL": "waffle_pi"
+                }
+            }
+        }
+    ],
+    "tags": {
+        "Project": "aws-robomaker-kickstart"
+    }
+}

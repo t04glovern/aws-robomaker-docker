@@ -3,3 +3,8 @@ docs/
 .travis.yml
 LICENSE
 NOTICE.txt
+output.tar
+cdk/
+INSTRUCTIONS.md
+img/
+RoboMakerJob.json

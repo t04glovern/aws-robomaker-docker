@@ -20,6 +20,6 @@ topics: []
 
 #aws region configuration
 aws_client_configuration:
-  region: "us-west-2"
+  region: "us-east-1"
   connect_timeout_ms: 9000
   request_timeout_ms: 9000

@@ -10,8 +10,11 @@ RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E
 
 # Installing ROS
 RUN apt-get update && apt-get install -y ros-melodic-desktop-full \
-		wget git nano python-rosinstall python3-colcon-common-extensions
+		wget git nano python-rosinstall python3-colcon-common-extensions python3-pip
 RUN rosdep init && rosdep update
+
+# Installing Colcon bundle tools
+RUN pip3 install -U setuptools && pip3 install colcon-ros-bundle
 
 RUN /bin/bash -c "echo 'export HOME=/home/ubuntu' >> /root/.bashrc && source /root/.bashrc"
 

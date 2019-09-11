@@ -13,7 +13,7 @@ aws_metrics_namespace: "robomaker_cloudwatch_monitoring_example"
 aws_client_configuration:
     # Specifies where you want the client to communicate. Examples include us-east-1 or us-west-1. You must ensure that
     # the service you want to use has an endpoint in the region you configure.
-    region: "us-west-2"
+    region: "us-east-1"
 
     # Built in the constructor and pulls information from your operating system. Do not alter the user agent.
     #userAgent: ""
