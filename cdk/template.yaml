@@ -111,4 +111,15 @@ Resources:
     Type: AWS::CDK::Metadata
     Properties:
       Modules: aws-cdk=1.8.0,@aws-cdk/aws-iam=1.8.0,@aws-cdk/aws-robomaker=1.8.0,@aws-cdk/core=1.8.0,@aws-cdk/cx-api=1.8.0,@aws-cdk/region-info=1.8.0,jsii-runtime=node.js/v12.9.0
+Outputs:
+  robosimroleoutput:
+    Value:
+      Fn::GetAtt:
+        - simroleB902E837
+        - Arn
+  robosimoutput:
+    Value:
+      Fn::GetAtt:
+        - simapp
+        - Arn
 
