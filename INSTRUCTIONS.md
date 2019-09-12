@@ -8,21 +8,21 @@ AWS RoboMaker is a development, deployment and simulation platform for ROS (Robo
 
 The purpose of this post is to ultimately walk you through simulating ROS packages on AWS RoboMaker. While this isn't a new topic, I don't believe anyone has done it justice for the ultra beginners. We won't be writing any ROS modules, however I'll try to make you feel comfortable packaging up existing ones.
 
-There is a huge collection of fantastic examples of RoboMaker configured ROS projects on the [AWS Robotics](https://github.com/aws-robotics) github. The project we work on in this post is interchangable with the ones there.
+There is a huge collection of fantastic examples of RoboMaker configured ROS projects on the [AWS Robotics](https://github.com/aws-robotics) github. The project we work on in this post is interchangeable with the ones there.
 
 ## Just Like the Simulations
 
 At the heart of RoboMaker is the manager services for a couple pieces of software:
 
 * [roscore](http://wiki.ros.org/roscore) - Collection of nodes and programs that are the pre-requisite for ROS-based systems. Nodes communicate with each other on an instance of roscore.
-* [rviz](http://wiki.ros.org/rviz) - 3D visualization tool for ROS. During simulations we can use rviz to visualise what the robot is doing. RViz can also be used to communicate back to the robot, however this isn't something we'll be covering.
-* [Gazebo](http://gazebosim.org/) - robot simulation with a proper physics engine.
+* [rviz](http://wiki.ros.org/rviz) - 3D visualisation tool for ROS. During simulations we can use rviz to visualise what the robot is doing. RViz can also be used to communicate back to the robot, however this isn't something we'll be covering.
+* [Gazebo](http://gazebosim.org/) - Robot simulation with a proper physics engine.
 
 RoboMaker will automatically setup all these pieces for you, which doesn't sound like a big deal; however if you've tried managing this stack of software yourself you'll be aware of how many moving parts there are.
 
 ## Dockerized Environment
 
-For the project I've created a dockerized environment that can be used to fully simulate everything locally (Gazebo is the exception due to graphic passthrough limitations over VNC). Pull down the repository to start with
+For the project I've created a Dockerized environment that can be used to fully simulate everything locally (Gazebo is the exception due to graphic passthrough limitations over VNC). Pull down the repository to start with
 
 ```bash
 git clone https://github.com/t04glovern/aws-robomaker-docker
@@ -139,7 +139,7 @@ Have a play around, add in some other optional displays. Below is an example of 
 
 ![ROS over VNC 6](img/docker-ros-vnc-example-06.png)
 
-Whem you're done, close down RViz and lets move onto the next step.
+When you're done, close down RViz and lets move onto the next step.
 
 ## Simulating on RoboMaker
 
@@ -246,3 +246,7 @@ Once loaded up, open an instance of Gazebo
 You should now be able to interact with the Simulation in a 3D space.
 
 ![ROS over RoboMaker 2](img/robomaker-simulation-example-02.png)
+
+## Summary
+
+AWS RoboMaker is a service that probably has gone mostly unnoticed to general users. However I can definitely see its value after giving it some time. ROS can be a major pain to work with, mostly due to different versions requiring distinctly different versions of roscore.
