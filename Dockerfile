@@ -11,7 +11,6 @@ RUN apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E
 # Installing ROS
 RUN apt-get update && apt-get install -y ros-melodic-desktop-full \
 		wget git nano python-rosinstall python3-colcon-common-extensions python3-pip
-RUN rosdep init && rosdep update
 
 # Installing Colcon bundle tools
 RUN pip3 install -U setuptools && pip3 install colcon-ros-bundle
@@ -23,6 +22,7 @@ RUN mkdir -p /home/ubuntu/catkin_ws/src
 
 # Set up the workspace
 RUN /bin/bash -c "source /opt/ros/melodic/setup.bash && \
+                  rosdep init && rosdep update && \
                   cd /home/ubuntu/catkin_ws/ && \
                   catkin_make && \
                   echo 'source /home/ubuntu/catkin_ws/devel/setup.bash' >> ~/.bashrc"
