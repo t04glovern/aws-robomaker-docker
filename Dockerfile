@@ -1,5 +1,5 @@
 # Kudos to DOROWU for his amazing VNC 16.04 KDE image
-FROM dorowu/ubuntu-desktop-lxde-vnc
+FROM dorowu/ubuntu-desktop-lxde-vnc:bionic
 LABEL maintainer "bpinaya@wpi.edu"
 
 RUN apt-get update && apt-get install -y dirmngr
