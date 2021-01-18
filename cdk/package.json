@@ -10,14 +10,14 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "aws-cdk": "^1.8.0",
-    "ts-node": "^8.1.0",
-    "typescript": "~3.6.2"
+    "aws-cdk": "^1.85.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-iam": "^1.8.0",
-    "@aws-cdk/aws-robomaker": "^1.8.0",
-    "@aws-cdk/core": "^1.8.0",
-    "source-map-support": "^0.5.9"
+    "@aws-cdk/aws-iam": "^1.85.0",
+    "@aws-cdk/aws-robomaker": "^1.85.0",
+    "@aws-cdk/core": "^1.85.0",
+    "source-map-support": "^0.5.16"
   }
 }
